@@ -1,0 +1,10 @@
+<.header>Students</.header>
+
+<.button phx-click="new">New student</.button>
+
+<.live_component
+  :for={student <- @students}
+  module={FormDisappearingWeb.StudentLive.Form}
+  id={"student-form-#{student.id}"}
+  student={student}
+/>
